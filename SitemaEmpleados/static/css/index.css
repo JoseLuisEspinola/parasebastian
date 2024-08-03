@@ -1,0 +1,9 @@
+thead tr {
+    font-size: 20px;
+    background-color: #6ee2f1;
+    color: #424242;
+}
+
+tbody tr {
+    background-color: rgb(248, 248, 241);
+}

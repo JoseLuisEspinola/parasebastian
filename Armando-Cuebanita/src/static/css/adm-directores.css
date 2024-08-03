@@ -1,0 +1,490 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background-color: #cce8d9;
+    font-family: "Bebas Neue", sans-serif;
+    color: #ffffff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* .header {
+    background-image: url(/img/IronMan.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+} 
+ */
+.menu {
+    position: absolute;
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 35px;
+    color: #67a1be;
+    cursor: pointer;
+}
+
+.menu .navbar ul li {
+    position: relativa;
+    float: left;
+}
+
+.menu .navbar ul li a {
+    font-size: 22px;
+    padding: 20px;
+    color: #67a1be;
+    display: block;
+}
+
+.menu .navbar ul li a:hover {
+    color: #ff2f28;
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    width: 25px;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+.menu .navbar ul li .btn-1 {
+    display: inline-block;
+    padding: 7px 20px;
+    margin: 13px 10px;
+    background-color: #ff2f28;
+    border: 0.1px solid #ff0228;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 22px;
+}
+
+.menu .navbar ul li .btn-1:hover {
+    background-color: transparent;
+    color: #ff0228;
+}
+
+/* ************** BLOQUE GRID ************* */
+/* **************************************** */
+.container-general {
+    max-width: 100vw;
+    margin-top: 90px;
+    font-family: sans-serif;
+
+    display: grid;
+    grid-template-columns: minmax(150px, 20%) 1fr;
+    grid-template-rows: calc(100vh - 120px);
+    border: 1px solid black;
+}    
+
+/* ********** BLOQUE IZQUIERDO ********** */
+.container-izquierdo {
+    max-width: 100%;
+    margin: 10px 10px 10px 16px;
+    border: 1px solid black;
+}
+
+.container-izquierdo h2 {
+    display: flex;
+    justify-content: center;
+    font-family: arial, 'Times New Roman', Times, serif ;
+    font-size: 1.6em;
+    color: #0000ff;
+    overflow: hidden;
+    margin: 10px 0 30px 0;
+}
+
+.opciones ul li {
+    margin: 20px 0;
+}
+
+.opciones ul li a {
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 6px 0px;
+    color: #67a1be;
+    text-transform: uppercase;
+    transition: 0.2s ease-in-out;
+}
+
+.opciones ul li a:hover {
+    color: #ff0000 ;
+    border-bottom: 4px solid #0000ff;
+    transition: 0.2s ease-in-out;
+}
+
+
+/****************************************/
+/* ********** BLOQUE DERECHO ********** */
+/****************************************/
+.contanier-derecho {
+    max-width: 100%;
+    min-height: 40%;
+    margin: 10px 16px 10px 10px;
+    border: 1px solid black;
+}
+
+/* ******* Formulario ********* */
+/* **************************** */
+/* Estilos para centrar el formulario en el medio del contenedor */
+#section-form {
+    min-height: auto;
+    max-width: 100%;
+    align-self: center;
+    background-image: url(/img/bgFormGladiador.jp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+}
+
+/* Texto de formulario */
+/* #section-form h2 {
+    text-align: center;
+    padding: 10px 3px 2px 3px;
+    color: #0000ff;
+    text-shadow: 1.4px 1.4px 0.4px #ffffff;
+    font-size: 2.5em;
+    letter-spacing: 0.08em;
+} */
+
+form {
+    max-width: 60%;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    box-sizing: border-box;
+
+    border-radius: 5px;
+}
+
+form p {
+    color: #ffffff;
+    text-align: center;
+    margin: 0;
+    font-size: 1.60rem;
+    margin: 0 0 10px;
+}
+
+input {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 8px;
+    box-sizing: border-box;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+}
+
+div label {
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+/* La primer letra debe ser en mayuscula */
+form .director {
+    text-transform: capitalize;
+}
+
+/* ***** boton del formulario ***** */
+.botones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.btn-form {
+    width: 14%;
+    text-align: center;
+    font-size: 16px;
+    background: #0000ff;
+    border: 1px solid #0000ff;
+    color: #ffffff;
+    padding: 12px;
+    margin: 0 1%;
+    transition: 0.4s;
+}
+
+.btn-form:hover {
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #0000ff;
+    transition: 0.3s;
+}
+
+/* botones anterior y posterior */
+.btn-skip {
+    width: 4%;
+    padding: 12px;
+}
+
+/******************************************/
+/* *************** Tabla ******************/
+.container-table {
+    max-width: 60%;
+    
+    margin: 10px auto;
+    
+    padding: 20px;
+    /* background-color: #ffffff; */
+    background: rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    border-radius: 5px;
+    overflow: hidden; /* Para asegurarse de que los bordes redondeados funcionen correctamente */
+}
+
+.table-wrapper {
+    max-height: 500px; /* Ajusta esta altura según sea necesario */
+    min-height: 500px;
+    overflow-y: auto;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #424242;
+}
+
+.style-table {
+    width: 100%;
+    margin: auto;
+    border-collapse: collapse;
+    font-size: 18px;
+}
+
+.style-table thead {
+    position: sticky;
+    top: 0;
+    background-color: #7f0098;
+    color: #ffffff;
+    text-align: left;
+    z-index: 1; /* Asegura que esté por encima del contenido desplazable */
+}
+
+/* .style-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+} */
+
+.style-table th,
+.style-table td {
+    padding: 12px 15px;
+}
+
+/* renglones */
+.style-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+    font-size: 18px;
+}
+
+/* renglones IMPAR */
+.style-table tbody tr:nth-of-type(odd) {
+    background-color: #a8a7a7;
+}
+
+/* renglones PAR */
+.style-table tbody tr:nth-of-type(even) {
+    background-color: #c5c3c3;
+}
+
+/* borde final de la tabla */
+.style-table tbody tr:last-of-type {
+    border-bottom: 2px solid #7f0098;
+}
+
+.style-table tbody tr:hover {
+    background-color: #525151;
+    cursor: pointer;
+}
+
+
+/* *********** Medias query ************ */
+/* ************************************* */
+@media (max-width:1200px) {
+    .container-izquierdo h2 {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width:991px) {
+    .menu {
+        padding: 20px;
+    }
+
+    .menu label {
+        display: initial;
+    }
+
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: rgba(15, 41, 60, 0.8);
+        z-index: 10;
+        display: none;
+    }
+
+    .menu .navbar ul li {
+        width: 100%;
+    }
+
+/*     .btn-1 {
+        display: none;
+    }
+ */
+
+    .menu .navbar ul li .btn-1 {
+        padding: 7px 10px;
+        background-color: transparent;
+        border: none;
+        color: #ff0228;
+    }
+
+    .menu .navbar ul li .btn-1:hover {
+        padding: 7px 10px;
+        background-color: transparent;
+        /* color | offset-x | offset-y | blur-radius */
+        text-shadow: 1px 0 10px #ffffff;
+    }
+
+    #menu:checked ~ .navbar {
+        display: initial;
+    }
+
+    .container-izquierdo h2 {
+        font-size: 1.1em;
+    }
+
+    .opciones ul li a {
+        font-weight: normal;
+        font-size: 0.9em;
+        padding: 6px 0px;
+    }
+}
+
+/**************************************/
+@media (max-width:600px) {
+    .container-general {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 60px 1fr;
+    }  
+
+    .container-izquierdo {
+        margin: 0px;
+        /* max-height: 100px; */
+    }
+
+    .container-izquierdo h2 {
+        margin: 0px;
+    }
+
+    .opciones ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    .opciones ul li {
+        margin: 5px;
+    }
+    /* *** fin izquierdo *** */
+
+    .contanier-derecho {
+        margin: 0px;
+    }
+
+    form p {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+
+    .btn-form {
+        width: 16%;
+        padding: 4px 2px;
+        margin: 0 4px;
+        font-size: 12px;
+    }
+
+    .btn-skip {
+        width: 4%;
+        padding: 4px 2px;
+        margin: 0 4px;
+    }
+}
+
+
+/**********************************/
+@media (max-width:490px) {
+    .menu {
+        justify-content: space-between;
+    }
+
+    h2 {
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+
+    .container-izquierdo h2 {
+        font-size: 1em;
+    }
+
+    form {
+        max-width: 100%;
+    }
+
+    input {
+        margin-bottom: 10px;
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    div label {
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+    .btn-form {
+        font-size: 10px;
+    }
+
+    .style-table th,
+    .style-table td {
+        font-size: 14px;
+    }
+
+    .container-table {
+        max-width: 100%;
+    }
+}

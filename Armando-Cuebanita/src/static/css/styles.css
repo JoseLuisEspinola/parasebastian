@@ -1,0 +1,564 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background-color: #201622;
+    font-family: "Bebas Neue", sans-serif;
+    color: #ffffff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    background-image: url(/src/static/img/bgVenom.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    position: absolute;
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 35px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+
+.menu .navbar ul li {
+    position: relativa;
+    float: left;
+}
+
+.menu .navbar ul li a {
+    font-size: 22px;
+    padding: 20px;
+    color: #ffffff;
+    display: block;
+}
+
+.menu .navbar ul li a:hover {
+    color: #ff2f28;
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    width: 25px;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+.header-content {
+    display: flex;
+    width: 100%;
+}
+
+.header-1 {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-self: flex-end;
+}
+
+.header-1 img {
+    width: 300px;
+
+    animation: rotar-logo 4s ease-in-out 2s infinite;
+}
+
+@keyframes rotar-logo {
+    from {
+        transform: rotateY(360deg);
+    }
+}
+
+.header-2 {
+    width: 50%;
+    margin-top: 80px;
+    text-align: end;
+}
+
+.header-2 h1 {
+    color: #ffffff72;
+    font-size: 80px;
+    line-height: 80px;
+}
+
+.header-2 img {
+    width: 70px;
+}
+
+.menu .navbar ul li .btn-1 {
+    display: inline-block;
+    padding: 7px 20px;
+    margin: 13px 10px;
+    background-color: #ff2f28;
+    border: 0.1px solid #ff0228;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 22px;
+}
+
+.menu .navbar ul li .btn-1:hover {
+    background-color: transparent;
+    color: #ff0228;
+}
+
+.btn-2 {
+    width: 110px;
+    display: inline-block;
+    padding: 7px 20px;
+    background-color: #ff2f28;
+    border: 1px solid #ff2128;
+    font-size: 20px;
+    margin-top: 30px;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+.btn-2:hover {
+    color: #ff2f28;
+    background-color: transparent;
+    border: 0.1px solid #ff3029;
+}
+
+.flecha-arriba{
+    bottom: 4px;
+    right: 4px;
+
+    position: fixed;
+
+    height: 40px; 
+    width: 40px;
+    cursor: pointer;
+}
+
+/* ****** Section Busqueda ****** */
+/**********************************/
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+}
+  
+.search-input {
+    padding: 7px;
+    border: 0.1px solid #ccc;
+    border-radius: 5px;
+    font-size: 20px;
+    width: 18em;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.search-button {
+    margin-left: 10px;
+    padding: 7px 20px;
+    border: 0.1px solid #ff0228;
+    background-color: #ff0228;
+    color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.search-button:hover {
+    background-color: transparent;
+    color: #ff0228;
+}
+
+
+/* ***** Seccion de las peliculas ***** */
+/* ************************************ */
+.movies {
+    padding: 50px 0 0 0; /* deberia poner padding-top */
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+hr {
+    border: 1px solid #ff2f28;
+    width: 50%;
+    margin-bottom: 40px;
+}
+
+.box-container-1,
+.box-container-2,
+.box-container-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.box-1,
+.box-2,
+.box-3 {
+    border-radius: 5px;
+    border: 0.5px solid #332235;
+    z-index: 1000;
+    display: none;
+
+    transition: 0.5s ease-in-out;
+}
+
+.box-1:nth-child(1),
+.box-1:nth-child(2),
+.box-1:nth-child(3),
+.box-1:nth-child(4) {
+    display: inline-block;
+}
+
+.box-2:nth-child(1),
+.box-2:nth-child(2),
+.box-2:nth-child(3),
+.box-2:nth-child(4) {
+    display: inline-block;
+}
+
+
+.box-3:nth-child(1),
+.box-3:nth-child(2),
+.box-3:nth-child(3),
+.box-3:nth-child(4) {
+    display: inline-block;
+}
+
+.box-1:hover, .box-2:hover, .box-3:hover {
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 8px 8px 16px 6px rgba(105, 12, 12, 0.6);
+}
+
+/* boton de mas pelis */
+.load-more {
+    margin-top: 40px;
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 15px;
+    border: 1px solid #ff2f28;
+    color: #ff0228;
+    font-size: 16px;
+    cursor: pointer;
+    align-self: flex-end;
+
+    animation: botones_CargarMas 1s infinite;
+}
+
+/* keyframes boton amimacion - poner valores a gusto del CONSUMIDOR jaja*/
+@keyframes botones_CargarMas {
+    0%, 100% {
+      transform: rotate(0deg);
+      transform-origin: 50% 100%;
+    }
+    10% {
+      transform: rotate(2deg);
+    }
+    20%, 40%, 60% {
+      transform: rotate(-4deg);
+    }
+    30%, 50%, 70% {
+      transform: rotate(4deg);
+    }
+    80% {
+      transform: rotate(-2deg);
+    }
+    90% {
+      transform: rotate(2deg);
+    }
+}
+
+.load-more:hover {
+    background-color: #ff2f28;
+    color: #ffffff;
+}
+
+.box-1, .box-2, .box-3 {
+    /* margin: 20px; */
+    width: 270px;
+    height: 370px;
+    border-radius: 5px;
+    background: var(--i);
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s, box-shadow 0.5s;
+    /* box-shadow: 3px 5px 5px rgba(3, 32, 51, 0.8); */
+    box-shadow: 3px 3px 1px 1px rgba(105, 12, 12, 0.4);
+    overflow: hidden;
+}
+
+.box-1:hover,
+.box-2:hover,
+.box-3:hover {
+    transform: scale(1.05);
+    /* box-shadow: 5px 8px 15px rgba(3, 32, 51, 0.9); */
+    box-shadow: 5px 8px 16px 6px rgba(105, 12, 12, 0.6);
+}
+
+.contenido {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.box-1:hover .contenido,
+.box-2:hover .contenido,
+.box-3:hover .contenido {
+    opacity: 1;
+}
+
+.contenido h2, .contenido a {
+    font-family: sans-serif;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 10px 0;
+    transition: transform 0.5s, color 0.5s;
+}
+
+.contenido h2:hover, .contenido a:hover {
+    transform: translateY(-5px);
+    color: rgba(255, 255, 255, 1);
+}
+
+.contenido h2 {
+    cursor: default;
+    font-size: 1.8em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.contenido a {
+    padding: 0 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+/* *********** Footer ********* */
+.footer .logo-opciones {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 0 30px;
+    margin-top: 100px;
+    border-top: 1px solid #ff2f283D;
+}
+
+.footer .logo-opciones ul {
+    display: flex;
+}
+
+
+/* footer .logo-opciones h3 {
+    font-size: 30px;
+} */
+
+/* es este <a> o el h3 de arriba */
+footer .logo-opciones .logo-footer {
+    color: #ffffff;
+    font-size: 30px;
+}
+
+.footer .logo-opciones ul li a {
+    color: #ffffff;
+    font-size: 20px;
+    margin-right: 20px;
+    display: block;
+}
+
+.footer ul li a:hover {
+    color: #ff2f28;
+}
+
+.footer .footer-politicas {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.footer .footer-politicas a {
+    color: #ffffff;
+}
+
+.footer .footer-copyright {
+    display: flex;
+    justify-content: center;
+    color: #295C6D;
+    margin-bottom: 20px;
+}
+
+/* ****** Medias query ****** */
+/* ************************** */
+@media (max-width:991px) {
+    .menu {
+        padding: 20px;
+    }
+
+    .menu label {
+        display: initial;
+    }
+
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: rgba(15, 41, 60, 0.8);
+        z-index: 10;
+        display: none;
+    }
+
+    .menu .navbar ul li {
+        width: 100%;
+    }
+
+    /* .btn-1 {
+        display: none;
+    } */
+
+    .menu .navbar ul li .btn-1 {
+        padding: 7px 10px;
+        background-color: transparent;
+        border: none;
+        color: #ff0228;
+    }
+    
+    .menu .navbar ul li .btn-1:hover {
+        padding: 7px 10px;
+        background-color: transparent;
+        /* color | offset-x | offset-y | blur-radius */
+        text-shadow: 1px 0 10px #ffffff;
+    }
+    
+    #menu:checked ~ .navbar {
+        display: initial;
+    }
+
+    .header-content {
+        flex-direction: colum;
+        padding: 180px 30px 30px 30px;
+    }
+
+    .header-1 {
+        width: 100%;
+        align-items: center;
+    }
+
+    .header-2 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .movies {
+        padding: 30px 60px;
+    }
+
+    .footer logo-opciones {
+        margin-top: 30px;
+        padding: 30px;
+        flex-direction: colum;
+        text-align: center;
+    }
+
+    .footer logo-opciones ul {
+        margin-top: 15px;
+        justify-content: center;
+    }
+}
+
+
+/* */
+@media (max-width:600px) {
+    .header-2 {
+        width: 100%;
+        text-align: left;
+    }
+
+    .header-2 h1 {
+        font-size: 60px;
+        /* line-height: 80px; */
+    }
+
+/*     form {
+        max-width: 60%;
+    } */
+}
+
+/* */
+@media (max-width:490px) {
+    .menu {
+        justify-content: space-between;
+    }
+
+    /* .header-2 {
+        width: 100%;
+        text-align: left;
+    } */
+    
+    .header-2 h1 {
+        display: none;
+    }
+
+    .header-2 img {
+        /* width: 70px; */
+        display: none;
+    }
+
+    /* .form {
+        max-width: 80%;
+    } */
+
+    .search-input {
+        width: 12em;
+    }
+    
+    footer .logo-opciones{
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    footer .logo-opciones h3 {
+        font-size: 25px;
+    }
+    
+    .footer logo-opciones a {
+        font-size: 15px;
+        margin-right: 20px;
+        display: block;
+    }
+    
+}
+

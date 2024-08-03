@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CueBanita</title>
+    <link rel="shortcut icon" type="Imagen/jpg" href="/src/static/img/icono_cuevana.jpg">
+    <link rel="stylesheet" href="/src/static/css/integrantes.css">
+</head>
+<body>
+    <header class="header">
+        <div class="menu container">
+            <a href="#" class="logo">cueBanita</a>
+            <input type="checkbox" id="menu">
+            <label for="menu">
+                <img src="/src/static/img/menu.png" class="menu-icono" alt="menu">
+            </label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="/src/index.html">Inicio</a></li>
+                    <li><a href="/src/adm-peliculas.html" class="btn-admin">Administrador</a></li>
+                    <li><a href="/src/index.html#masvistas">Mas vistas</a></li>
+                    <li><a href="/src/index.html#accion">Accion</a></li>
+                    <li><a href="/src/index.html#extrenos">Estrenos</a></li>
+                    <li><a href="/src/contacto.html">Contacto</a></li>
+                    <li><a href="/src/login.html" class="btn-1">Login</a></li>
+                    <li><a href="/src/registro.html" class="btn-1">Registro</a></li>
+                    <li><a href="#" class="btn-1 btn-close">Cerrar Seción</a></li>
+                </ul>
+            </nav>
+        </div>  
+    </header>
+
+    <section id="zona1">
+        <!-- Integrantes -->
+        <div class="caja">
+            <h1>PROYECTO CUEBANITA</h1>
+            <h2>Integrantes: Grupo#2</h2>
+            <ul class="lista-integrantes">
+                <li class="integrante">Mercado Adriana</li>
+                <!-- <li class="integrante">Tierno Nicolás</li> -->
+                <li class="integrante">Petrini Sebastian</li>
+                <li class="integrante">Espinola J. Luis</li>
+            </ul>
+        </div>
+
+        <!-- <div class="presentacio -->
+        <div class="contanier-nombres">
+            <div class="nombre1">
+                ADRIANA
+            </div>
+            <!-- <div class="nombre2">
+                NICOLAS
+            </div> -->
+            <div class="nombre3">
+                SEBASTIAN
+            </div>
+            <div class="nombre4">
+                JOSE LUIS
+            </div>
+        </div>
+
+        <!-- Musica de fondo. Lo podría haber puesto en cualquier lugar. Lo puse SIN la opción de mostrar los controles -->
+        <audio id="background-music" src="/src/static/audio/musica-fondo.mp3" autoplay loop>
+            Tu navegador no soporta el elemento de audio.
+        </audio>
+
+    </section>
+    <!-- JavaScript para establecer el volumen inicial -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var audio = document.getElementById('background-music');
+            audio.volume = 0.5; // Establecí el volumen al 50%
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CueBanita</title>
+    <link rel="shortcut icon" type="Imagen/jpg" href="./img/icono_cuevana.jpg">
+    <link rel="stylesheet" href="/src/static/css/adm-peliculas.css">
+</head>
+<body>
+    <header class="header">
+        <div class="menu container">
+            <a href="/src/integrantes.html" class="logo">cueBanita</a>
+            <input type="checkbox" id="menu">
+            <label for="menu">
+                <img src="/src/static/img/menu.png" class="menu-icono" alt="menu">
+            </label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="/src/index.html">Inicio</a></li>
+                    <li><a href="#" class="btn-admin">Administrador</a></li>
+                    <li><a href="/src/index.html#masvistas">Mas vistas</a></li>
+                    <li><a href="/src/index.html#accion">Accion</a></li>
+                    <li><a href="/src/index.html#extrenos">Estrenos</a></li>
+                    <li><a href="/src/contacto.html">Contacto</a></li>
+                    <li><a href="/src/login.html" class="btn-1">Login</a></li>
+                    <li><a href="/src/registro.html" class="btn-1">Registro</a></li>
+                    <li><a href="#" class="btn-1 btn-close">Cerrar Seción</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- bloque -->
+    <section class="container-general">
+        <!-- div de datos izquierdo -->
+        <div class="container-izquierdo">
+            <h2>MENU ADMINISTRADOR</h2>
+            <div class="opciones">
+                <ul>
+                    <li><a href="#">Peliculas</a></li>
+                    <li><a href="/src/adm-generos.html">Generos</a></li>
+                    <li><a href="/src/adm-actores.html">Actores</a></li>
+                    <li><a href="/src/adm-directores.html">Directores</a></li>
+                    <li><a href="/src/adm-usuarios.html">Usuarios</a></li>
+                </ul>
+            </div>
+        </div>
+
+            <!-- <div de los datos: derecho -->
+        <div class="contanier-derecho">
+
+            <!-- seccion formulario -->
+            <div id="section-form" class="section_formulario">
+                <!-- <h2>Datos de Peliculas</h2> -->
+
+                <!-- <form action="./php/enviar.php" method="post"> -->
+                <form id="form-registro" action="" autocomplete="on">
+                    <p class="titulo-form">FORMULARIO PELICULAS</p>
+                    <input type="number" class="form-control" id="movieId">
+
+                    <!-- imagen -->
+                    <div class="form-groupo" id="grupo-img">
+                        <img src="/src/static/img/icono-cuevana.jpg" alt="avatar" id="img">
+                        <input type="file" name="imagen" id="imagen" accept="image/*">
+                        <label for="imagen">Imagen pelicula</label>
+                    </div>
+
+                    <!-- titulo -->
+                    <div class="form-grupo" id="grupo-titulo">
+                        <label for="titulo">Título de película</label>
+                        <div class="formulario-grupo-input">
+                            <input id="titulo" class="titulo" type="text" name="titulo" placeholder="Titulo de pelicula" pattern="[a-zA-Z' ]*" required>
+                        </div>
+                    </div>
+
+                    <!-- sipnosis -->
+                    <div class="form-grupo" id="grupo-sinopsis">
+                        <label for="sinopsis">Sinopsis:</label>
+                        <div class="formulario-grupo-input">
+                            <textarea id="sinopsis" name="sinopsis" placeholder="Sinopsis o Descripcion de pelicula" minlength="6" required></textarea>
+                        </div>
+                    </div>
+
+                    <!-- url de la pelicula -->
+                    <div class="form-grupo" id="grupo-url_pelicula">
+                        <label for="url_pelicula">URL Pelicula:</label>
+                        <div class="formulario-grupo-input">
+                            <input id="url_pelicula" class="url_pelicula" type="text" name="password1" placeholder="URL de película" required>
+                        </div>
+                    </div>
+
+
+                    <!-- Lanzamiento, duracion, actor, director, genero y categoria -->
+                    <div class="form-grupo" id="grupo-lanzamiento-duracion-actor-director-genero-categoria">
+
+                        <div class="input-lanzamiento">
+                            <label for="ano-extreno">Extreno:</label>
+                            <div class="formulario-grupo-input">
+                                <input id="ano-extreno" class="ano-extreno" type="number" name="ano-extreno" placeholder="ej 1890" required>
+                            </div>
+                        </div>
+                        
+                        <div class="input-duracion">
+                            <label for="duracion">Duración:</label>                            
+                            <div class="formulario-grupo-input">
+                                <input id="duracion" class="duracion" type="number" name="duracion" placeholder="Minutos: xxx" max="240" min="30" required>
+                            </div>
+                        </div>
+
+                        <div class="select-genero">
+                            <label for="genero">Género:</label>
+                            <div class="formulario-grupo-input">
+                                    <select id="genero" name="genero" class="genero">
+                                        <option value="accion">Acción</option>
+                                        <option value="aventura">Aventura</option>
+                                        <option value="comedia">Comedia</option>
+                                        <option value="drama">Drama</option>
+                                        <option value="terror">Terror</option>
+                                        <option value="cienciaficcion">Ciencia Ficcion</option>
+                                        <option value="fantasia">Fantasía</option>
+                                        <option value="musical">Musical</option>
+                                        <option value="romance">Romance</option>
+                                        <option value="thriller">Thriller</option>
+                                        <option value="suspenso">Suspenso</option>
+                                        <option value="misterio">Misterio</option>
+                                        <option value="animacion">Animacion</option>
+                                        <option value="documental">Documental</option>
+                                        <option value="belico">Belico</option>
+                                        <option value="western">Western</option>
+                                        <option value="crimen">Crimen</option>
+                                        <option value="Biografia">Biografia</option>
+                                        <option value="deporte">Deporte</option>
+                                        <option value="historico">Historico</option>
+                                    </select>
+                            </div>
+                        </div>
+
+                        <div class="select-categoria">
+                            <label for="categoria">Categoría:</label>
+                            <div class="formulario-grupo-input">
+                                <select id="categoria" name="categoria" class="categoria">
+                                    <option value="masvistas">Mas vistas</option>
+                                    <option value="acccion">Accion</option>
+                                    <option value="extrenos">Extrenos</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="select-actor">
+                            <label for="actor">Actor:</label>
+                            <div class="formulario-grupo-input">
+                                <select id="actor" name="Actor" class="actor">
+                                    <option value="merylstreep">Meryl Streep</option>
+                                    <option value="Jenniferlawrence">Jennifer Lawrence</option>
+                                    <option value="natalieportman">Natalie Portman</option>
+                                    <option value="angelinajolie">Angelina Jolie</option>
+                                    <option value="charlizetheron">Charlize Theron</option>
+                                    <option value="emmastone">Emma Stone</option>
+                                    <option value="cateblanchett">Cate Blanchett</option>
+                                    <option value="nicolekidman">Nicole Kidman</option>
+                                    <option value="sandrabullock">Sandra Bullock</option>
+                                    <option value="leonardodicaprio">Leonardo DiCaprio</option>
+                                    <option value="robertdowneyjr">Robert Downey Jr</option>
+                                    <option value="emmastone">Tom Hanks</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="select-director">
+                            <label for="director">Director:</label>
+                            <div class="formulario-grupo-input">
+                                <select id="director" name="director" class="director">
+                                    <option value="stevenspielberg">Steven Spielberg</option>
+                                    <option value="peterjackson">Peter Jackson</option>
+                                    <option value="martinscorsese">Martin Scorsese</option>
+                                    <option value="christofernolan">Christofer Nolan</option>
+                                    <option value="stevensoderbergh">Steven Soderbergh</option>
+                                    <option value="quentintarantino">Quentin Tarantino</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- boton de enviar -->
+                     <div class="botones">
+                         <input type="button" class="btn-form btn-skip" title="Registro anterior" value="<">
+                         <input type="button" class="btn-form btn-skip" title="Registro posterior" value=">">
+                         <input type="button" class="btn-form nuevo" title="Igresa nuevo registro" value="NUEVO">
+                         <input type="button" class="btn-form editar" title="Edita registro" value="EDITA">
+                         <input type="button" class="btn-form eliminar" title="Elimina actual" value="ELIMINA">
+                         <input type="button" class="btn-form cancelar" title="Cancelar lo escrito" value="CANCELA">
+                         <input type="submit" class="btn-form guardar" title="Grabar registro" value="GUARDA">
+                        <!-- <input type="submit" class="btn-form" title="Clic para grabar" value="ENVIAR"> -->
+                    </div>
+                </form>
+                
+            </div>
+
+            <div class="container-table">
+                <h2 style="color: #000000;">Lista de Géneros</h2>
+                <div class="table-wrapper">
+                    <table class="style-table" id="tabla-peliculas" style="color: #000000;">
+                        <thead>
+                            <tr>
+                                <th>TITULO</th>
+                                <th>SINOPSIS</th>
+                                <th>URL_PELICULA</th>
+                                <th>EXTRENO</th>
+                                <th>DURAC</th>
+                                <th>CATEGORIA</th>
+                                <th>ACTOR</th>
+                                <th>DIRECTOR</th>
+                                <th>ACCIONES</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>   <!-- container-table -->
+
+        </div>
+    </section>
+    <script src="/src/static/js/poner-img-pelis.js"></script>
+    <script src="/src/static/js/tabla-peliculas.js"></script>
+</body>
+</html>

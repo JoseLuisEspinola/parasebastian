@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CueBanita</title>
+    <link rel="shortcut icon" type="Imagen/jpg" href="/src/static/img/icono_cuevana.jpg">
+    <link rel="stylesheet" href="/src/static/css/adm-actores.css">
+</head>
+<body>
+    <header class="header">
+        <div class="menu container">
+            <a href="/src/integrantes.html" class="logo">cueBanita</a>
+            <input type="checkbox" id="menu">
+            <label for="menu">
+                <img src="/src/static/img/menu.png" class="menu-icono" alt="menu">
+            </label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="/src/index.html">Inicio</a></li>
+                    <li><a href="#" class="btn-admin">Administrador</a></li>
+                    <li><a href="/src/index.html#masvistas">Mas vistas</a></li>
+                    <li><a href="/src/index.html#accion">Accion</a></li>
+                    <li><a href="/src/index.html#extrenos">Estrenos</a></li>
+                    <li><a href="/src/contacto.html">Contacto</a></li>
+                    <li><a href="/src/login.html" class="btn-1">Login</a></li>
+                    <li><a href="/src/registro.html" class="btn-1">Registro</a></li>
+                    <li><a href="#" class="btn-1 btn-close">Cerrar Seción</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- bloque -->
+    <section class="container-general">
+        <!-- div de datos izquierdo -->
+        <div class="container-izquierdo">
+            <h2>MENU ADMINISTRADOR</h2>
+            <div class="opciones">
+                <ul>
+                    <li><a href="/src/adm-peliculas.html">Peliculas</a></li>
+                    <li><a href="/src/adm-generos.html">Generos</a></li>
+                    <li><a href="#">Actores</a></li>
+                    <li><a href="/src/adm-directores.html">Directores</a></li>
+                    <li><a href="/src/adm-usuarios.html">Usuarios</a></li>
+                </ul>
+            </div>
+        </div>
+
+       <!-- <div de los datos: derecho -->
+        <div class="contanier-derecho">
+            <!-- seccion formulario -->
+            <div id="section-form" class="section_formulario">
+                <!-- <h2>Datos de Peliculas</h2> -->
+
+                <!-- <form action="./php/enviar.php" method="post"> -->
+                <form id="form-registro" action="" autocomplete="on">
+                    <p class="titulo-form">FORMULARIO ACTORES</p>
+
+                    <!-- genero -->
+                    <div class="form-grupo" id="grupo-actor">
+                        <label for="actor">Nombre de Actor:</label>
+                        <div class="formulario-grupo-input">
+                            <input id="actor" class="actor" type="text" name="actor" placeholder="Nombre de Actor" pattern="[a-zA-Z' ]*" required>
+                        </div>
+                    </div>
+
+                    <!-- boton de enviar -->
+                     <div class="botones">
+                         <input type="button" class="btn-form btn-skip" title="Registro anterior" value="<">
+                         <input type="button" class="btn-form btn-skip" title="Registro posterior" value=">">
+                         <input type="button" class="btn-form nuevo" title="Igresa nuevo registro" value="NUEVO">
+                         <input type="button" class="btn-form editar" title="Edita registro" value="EDITA">
+                         <input type="button" class="btn-form eliminar" title="Elimina actual" value="ELIMINA">
+                         <input type="button" class="btn-form cancelar" title="Cancelar lo escrito" value="CANCELA">
+                         <input type="submit" class="btn-form guardar" title="Grabar registro" value="GUARDA">
+                        <!-- <input type="submit" class="btn-form" title="Clic para grabar" value="ENVIAR"> -->
+                    </div>
+                </form>
+            </div>  <!-- section-form -->
+
+
+            <div class="container-table">
+                <h2>Lista de Actores</h2>
+                <div class="table-wrapper">
+                    <table class="style-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>NOMBRE DE ACTOR</th>
+                                <th>ACCIONES</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Meryl Streep</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Meryl Streep</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Jennifer Lawrence</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Natalie Portman</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Angelina Jolie</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Charlize Theron</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Emma Stone</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>Cate Blanchett</td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>Nicole Kidman</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>Sandra Bullock</td>
+                            </tr>
+                            <tr>
+                                <td>11</td>
+                                <td>Leonardo DiCaprio</td>
+                            </tr>
+                            <tr>
+                                <td>12</td>
+                                <td>Robert Downey Jr.</td>
+                            </tr>
+                            <tr>
+                                <td>13</td>
+                                <td>Tom Hanks</td>
+                            </tr>
+                            <tr>
+                                <td>14</td>
+                                <td>Brad Pitt</td>
+                            </tr>
+                            <tr>
+                                <td>15</td>
+                                <td>Johnny Depp</td>
+                            </tr>
+                            <tr>
+                                <td>16</td>
+                                <td>Denzel Washington</td>
+                            </tr>
+                            <tr>
+                                <td>17</td>
+                                <td>Will Smithn</td>
+                            </tr>
+                            <tr>
+                                <td>18</td>
+                                <td>Christian Bale</td>
+                            </tr>
+                            <tr>
+                                <td>19</td>
+                                <td>Matt Damon</td>
+                            </tr>
+                            <tr>
+                                <td>20</td>
+                                <td>Chris Hemsworth</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>   <!-- container-table -->
+
+        </div>    <!-- contanier-derecho -->
+    </section>
+</body>
+</html>

@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background-color: #201622;
+    font-family: "Bebas Neue", sans-serif;
+    color: #ffffff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* .header {
+    background-image: url(/img/IronMan.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}  */
+
+.menu {
+    position: absolute;
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 35px;
+    color: #ffffff;
+    cursor: default;
+}
+
+.menu .navbar ul li {
+    position: relativa;
+    float: left;
+}
+
+.menu .navbar ul li a {
+    font-size: 22px;
+    padding: 20px;
+    color: #ffffff;
+    display: block;
+}
+
+.menu .navbar ul li a:hover {
+    color: #ff2f28;
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    width: 25px;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+.menu .navbar ul li .btn-1 {
+    display: inline-block;
+    padding: 7px 20px;
+    margin: 13px 10px;
+    background-color: #ff2f28;
+    border: 0.1px solid #ff0228;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 22px;
+}
+
+.menu .navbar ul li .btn-1:hover {
+    background-color: transparent;
+    color: #ff0228;
+}
+
+#zona1 {
+    margin-top: -68px;
+    background-image: url(/src/static/img/IronMan.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+   
+    /* height: calc(100vh - 80px); */
+    height: 100vh;
+}
+
+/* ************** ANIMACIONES en bloque********** */
+/* ********************************************** */
+.caja{
+    padding: 140px 0 0px;
+    max-width: 50%;
+    margin: 50px auto 20px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+ 
+h1 {
+    justify-content: center;
+    margin-bottom: 8px;
+    color: blue;
+    font-size: 50px;
+}
+
+h2 {
+    color: yellow;
+    margin-bottom: 12px;
+    font-size: 36px;
+}
+
+.lista-integrantes {
+    list-style: none;
+    padding: 0;
+    overflow: hidden; /* Oculta el contenido que se desborda */
+
+}
+
+.integrante {
+    font-family: "Bebas Neue", sans-serif;
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 50px;
+    font-size: 30px;
+    letter-spacing: 1.4px;
+    display: block;
+
+    animation: enbloque 10s linear infinite;  /* tarda 10 segundos en pasar todos los nombres */
+}
+
+@keyframes enbloque {
+    0%, 100% {
+        /* transform: translateY(-459%);  este % es para 4 renglones*/
+        transform: translateY(-336%);
+    }
+    25% {
+        transform: translateY(0);
+    }
+}
+
+
+/* ****** Animacion por renglon ******* */
+/* ********** Primer renglon ********** */
+div.contanier-nombres {
+    display:block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 4rem;
+}
+
+.nombre1 {
+    color:  #FF4081;
+    text-shadow: 4px 2px #3bd2f8;
+
+    animation: slide-in-1 17s linear infinite;
+}
+
+@keyframes slide-in-1 {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-16%);
+    }
+}
+
+/* ************* Segundo renglon *********** */
+/* .nombre2 {
+    color: #008000;
+    text-shadow: 4px 2px #ffffff;
+
+    animation: slide-in-2 18s linear infinite;
+}
+
+@keyframes slide-in-2 {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-16%);
+    }
+} */
+
+/* ************* Tercer renglon *********** */
+.nombre3 {
+    color: #0099ff;
+    text-shadow: 4px 2px #ff0000;
+
+    animation: slide-in-3 19s linear infinite;
+}
+
+@keyframes slide-in-3 {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-16%);
+    }
+}
+
+/* ************* Cuarto renglon *********** */
+.nombre4 {
+    color: #0000ff;
+    text-shadow: 4px 2px #ffff00;
+
+    animation: slide-in-4 20s linear infinite;
+}
+
+@keyframes slide-in-4 {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-16%);
+    }
+}
+
+/* *********** Medias query ************ */
+/* ************************************* */
+@media (max-width:991px) {
+    .menu {
+        padding: 20px;
+    }
+
+    .menu label {
+        display: initial;
+    }
+
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: rgba(15, 41, 60, 0.8);
+        z-index: 10;
+        display: none;
+    }
+
+    .menu .navbar ul li {
+        width: 100%;
+    }
+
+/*     .btn-1 {
+        display: none;
+    }
+ */
+
+    .menu .navbar ul li .btn-1 {
+        padding: 7px 10px;
+        background-color: transparent;
+        border: none;
+        color: #ff0228;
+    }
+
+    .menu .navbar ul li .btn-1:hover {
+        padding: 7px 10px;
+        background-color: transparent;
+        /* color | offset-x | offset-y | blur-radius */
+        text-shadow: 1px 0 10px #ffffff;
+    }
+
+    #menu:checked ~ .navbar {
+        display: initial;
+     }
+}
+
+
+
+/**************************************/
+/* */
+@media (max-width:600px) {
+    .integrante {
+        padding: 7px;
+        margin: 4px;
+        font-size: 26px;
+    }
+
+    div.contanier-nombres {
+        font-size: 3.5rem;
+    }    
+}
+
+/* */
+@media (max-width:490px) {
+    .menu {
+        justify-content: space-between;
+    }
+
+    h1 {
+        font-family: "Bebas Neue", sans-serif;
+        justify-content: center;
+        margin-bottom: 10px;
+        font-size: 26px;
+    }
+    
+    h2 {
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+
+    .integrante {
+        padding: 5px;
+        margin: 2px;
+        font-size: 16px;
+        letter-spacing: 1.2px;
+    }
+
+    div.contanier-nombres {
+        font-size: 2.8em;
+    }   
+    
+}

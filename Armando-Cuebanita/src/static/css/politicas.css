@@ -1,0 +1,191 @@
+:root {
+    --color1: #f1cc87;
+    --color2: #0099ff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(247, 227, 202);
+}
+
+/* header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+ */
+
+.btn-salida{
+    bottom: 0.2em;
+    right: 0.2em;
+
+    position: fixed;
+
+    height: 1.6em; 
+    width: 4.5em;
+    padding-top: 0.5em;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 1px solid var(--color2);
+    cursor: pointer;
+    color: #ffffff;
+    background-color: var(--color2);
+
+    animation: btn-salida 1s infinite;
+}
+
+/* keyframes boton amimacion - poner valores a gusto del CONSUMIDOR jaja*/
+@keyframes btn-salida {
+    0%, 100% {
+      color: #ffffff;
+    }
+    25% {
+      color: #0000ff;
+    }
+    50% {
+      color: #ffff00;
+    }
+    75% {
+      color: #000000;
+    }
+}
+
+.btn-salida:hover {
+    background-color: transparent;
+    color: var(--color2);
+}
+
+h1 {
+    text-align: center;
+    font-size: 3.6em;
+    margin-top: 10px 0 20px;
+}
+
+.container-items {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+h2 {
+    margin: 30px 0 8px;
+    font-size: 2.8em;
+    Color: blue;
+}
+
+h3 {
+    margin: 10px 0;
+    font-size: 2em;
+    color: darkcyan;
+}
+
+p {
+    margin: 0;
+    font-size: 1.6em;
+}
+
+.items-texto2 p {
+    margin: 0 0 0 40px;
+}
+
+/* ********* Botones ********* */
+.botones {
+    margin: 50px auto 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+.botones button {
+    margin: 0 6px 30px;
+    padding: 10px 0 10px;
+    width: 150px;
+    border-radius: 5px;
+    border: 1px solid var(--color1);
+}
+
+.botones button:hover {
+    background-color: transparent;
+    border: 1px solid blue;
+    color: blue;
+}
+
+
+/* ******************************** */
+/*           MEDIAS QUERY           */
+/* ******************************** */
+@media (max-width:600px) {
+    h1 {
+        text-align: center;
+        font-size: 2.8em;
+        margin-top: 10px 0 20px;
+    }
+    
+    .container-items {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+    
+    h2 {
+        margin: 30px 0 8px;
+        font-size: 2.2em;
+        Color: blue;
+    }
+    
+    h3 {
+        margin: 10px 0;
+        font-size: 1.8em;
+        color: darkcyan;
+    }
+    
+    p {
+        margin: 0;
+        font-size: 1.4em;
+    }
+    
+    .items-texto2 p {
+        margin: 0 0 0 40px;
+    }
+}
+
+@media (max-width:490px) {
+    h1 {
+        text-align: center;
+        font-size: 2.4em;
+        margin-top: 10px 0 20px;
+    }
+    
+    .container-items {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+    
+    h2 {
+        margin: 30px 0 8px;
+        font-size: 1.8em;
+        Color: blue;
+    }
+    
+    h3 {
+        margin: 10px 0;
+        font-size: 1em;
+        color: darkcyan;
+    }
+    
+    p {
+        margin: 0;
+        font-size: 1.2em;
+    }
+    
+    .items-texto2 p {
+        margin: 0 0 0 40px;
+    }
+
+    .btn-salida{
+        height: 1.4em; 
+        width: 4.1em;
+        padding-top: 0.3em;
+    }
+}

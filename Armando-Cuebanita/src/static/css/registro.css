@@ -1,0 +1,482 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background-color: #201622;
+    font-family: "Bebas Neue", sans-serif;
+    color: #ffffff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    background-image: url(/src/static/img/bgGladiador.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    position: absolute;
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 35px;
+    color: #DAB24C;    /* original es #ffffff; */
+    cursor: pointer;
+}
+
+.menu .navbar ul li {
+    position: relativa;
+    float: left;
+}
+
+.menu .navbar ul li a {
+    font-size: 22px;
+    padding: 20px;
+    color: #DAB24C;    /* original es #ffffff */
+    display: block;
+}
+
+.menu .navbar ul li a:hover {
+    color: #ff2f28;     /* original es #ff2128 */
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    width: 25px;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+.header-content {
+    display: flex;
+    width: 100%;
+}
+
+.header-1 {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-self: flex-end;
+}
+
+.header-1 img {
+    width: 300px;
+
+    animation: rotar-logo 4s ease-in-out 2s infinite;
+}
+
+@keyframes rotar-logo {
+    from {
+        transform: rotateY(360deg);
+    }
+}
+
+.header-2 {
+    width: 50%;
+    margin-top: 80px;
+    text-align: end;
+}
+
+.header-2 h1 {
+    color: #ffffff72;
+    font-size: 80px;
+    line-height: 80px;
+}
+
+.header-2 img {
+    width: 70px;
+}
+
+.menu .navbar ul li .btn-1 {
+    display: inline-block;
+    padding: 7px 20px;
+    margin: 13px 10px;
+    background-color: #ff2f28;
+    border: 0.1px solid #ff0228;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 22px;
+}
+
+.menu .navbar ul li .btn-1:hover {
+    background-color: transparent;
+    color: #ff0228;
+}
+
+.btn-2 {
+    width: 110px;
+    display: inline-block;
+    padding: 7px 20px;
+    background-color: #ff2f28;
+    border: 1px solid #ff2128;
+    font-size: 20px;
+    margin-top: 30px;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+.btn-2:hover {
+    color: #ff2f28;
+    background-color: transparent;
+    border: 0.1px solid #ff2f28;
+}
+
+.flecha-arriba{
+    bottom: 4px;
+    right: 4px;
+
+    position: fixed;
+
+    height: 40px; 
+    width: 40px;
+    cursor: pointer;
+}
+
+/* ******* Formulario ********* */
+/* **************************** */
+/* Estilos para centrar el formulario en el medio del contenedor */
+#section-form {
+    min-height: 100vh;
+    max-width: 100%;
+    align-self: center;
+    background-image: url(/src/static/img/bgFormGladiador.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;   /* para que la imagen quede fija en el fondo */
+    margin: 0;
+    padding-bottom: 40px 60px;
+}
+
+/* Texto de formulario */
+#section-form h2 {
+    text-align: center;
+    padding: 30px 3px 2px 3px;
+    color: red;
+    text-shadow: 1.4px 1.4px 0.4px #ffffff;
+    font-size: 3em;
+    letter-spacing: 0.08em;
+}
+
+form {
+    /*width: 760px;*/
+    max-width: 40%;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    box-sizing: border-box;
+
+    border-radius: 5px;
+}
+
+form p {
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+/* ********** Tema imagen ********* */
+form #grupo-img {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+  
+form img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 6px solid #AAA;
+}
+    
+form #grupo-img {
+    align-items: center;
+}
+
+form #grupo-img label {
+    margin-top: 8px;
+    padding: 5px 10px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #ffffff;
+}
+
+form #grupo-img label:hover {
+    background-color: #ffffff;
+    color: #000000;
+    cursor: pointer;
+}
+
+form input#foto {
+  display: none;
+}
+  
+/* **** Text-area **** */
+input {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 8px;
+    box-sizing: border-box;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+}
+
+/* ** Los campos nombre y apellido, la primer letra debe ser en mayuscula ** */
+form .nombre, 
+form .apellido {
+    text-transform: capitalize;  /* Primer caracter mayuscula */
+}
+
+/*************************/
+/* Estilos para los contenedores de los campos */
+.form-groupo {
+    display: flex;
+    align-items: center;
+    /* margin-bottom: 20px; */
+}
+
+div label {
+    /* color: #ff2f28; */
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+/* Estilos para el checkbox y su label */
+/***************************************/
+#grupo-check {
+    width: 100%;
+    display: inline-flex;
+}
+
+/* **** padre **** */
+div#grupo-check.form-grupo {
+    width: 100%;
+    height: 40px;
+    position: relative;
+}
+
+/* **** el check **** */
+div#grupo-check.form-grupo input {
+    position: absolute;
+    width: 3%;
+    left: 0;
+    top: 0;
+    scale: 1.6;
+}
+
+/* **** Acepto que se envien los datos **** */
+div#grupo-check.form-grupo label {
+    position: absolute;
+    font-size: 1.2em;
+    left: 38px;
+    top: 0;
+    /* scale: 1.6; */
+}
+
+/* /* **** loguearse **** */
+div#grupo-check.form-grupo a {
+    position: absolute;
+    right: 0;
+    font-size: 20px;
+    color: aqua;
+}
+
+/* ***** boton del formulario ***** */
+form .btn-form {
+    text-align: center;  /* si el boton fuese type="button" quedaria en el centro, pero como es type="subnit" no queda en el centro */
+    background: #40434d;
+    color: #9e9c9c;
+    padding: 14px;
+    margin: 0;
+    transition: 0.4s;
+}
+
+form .btn-form:hover {
+    cursor: pointer;
+    color: #ffffff;
+    transition: 0.3s;
+}
+
+
+/* ****** Medias query ****** */
+@media (max-width:991px) {
+    .menu {
+        padding: 20px;
+    }
+
+    .menu label {
+        display: initial;
+    }
+
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: rgba(15, 41, 60, 0.8);
+        z-index: 10;
+        display: none;
+    }
+
+    .menu .navbar ul li {
+        width: 100%;
+    }
+
+/*     .btn-1 {
+        display: none;
+    } */
+
+    .menu .navbar ul li .btn-1 {
+        padding: 7px 10px;
+        background-color: transparent;
+        border: none;
+        color: #ff0228;
+    }
+    
+    .menu .navbar ul li .btn-1:hover {
+        padding: 7px 10px;
+        background-color: transparent;
+        /* color | offset-x | offset-y | blur-radius */
+        text-shadow: 1px 0 10px #ffffff;
+    }
+    
+    #menu:checked ~ .navbar {
+        display: initial;
+     }
+
+    .header-content {
+        flex-direction: colum;
+        padding: 180px 30px 30px 30px;
+    }
+
+    .header-1 {
+        width: 100%;
+        align-items: center;
+    }
+
+    .header-2 {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* .movies {
+        padding: 30px 60px;
+    } */
+
+    form {
+         max-width: 50%;
+    }
+
+    .footer {
+        margin-top: 30px;
+        padding: 30px;
+        flex-direction: colum;
+        text-align: center;
+    }
+
+    .footer ul {
+        margin-top: 15px;
+        justify-content: center;
+    }
+}
+
+
+/* */
+@media (max-width:600px) {
+    .header-2 {
+        width: 100%;
+        text-align: left;
+    }
+
+    .header-2 h1 {
+        font-size: 60px;
+        /* line-height: 80px; */
+    }
+
+    form {
+        max-width: 70%;
+    }
+
+    div#grupo-check.form-grupo input {
+        width: 4%;
+        margin: 0 12px 4px 4px;
+        scale: 1.4;
+    }
+    
+}
+
+/* */
+@media (max-width:490px) {
+    .menu {
+        justify-content: space-between;
+    }
+    
+    /* .header-2 {
+        width: 100%;
+        text-align: left;
+    } */
+    
+    .header-2 h1 {
+        display: none;
+    }
+
+    .header-2 img {
+        /* width: 70px; */
+        display: none;
+    }
+
+    div#grupo-check.form-grupo {
+        display: block;
+        /* width: 100%; */
+        height: 74px;
+        font-size: 0.8em;
+        position: relative;
+    }
+
+    div#grupo-check.form-grupo input {
+        width: 5%;
+        margin: 0 12px 4px 4px;
+        scale: 1.6;
+    }
+
+    div#grupo-check.form-grupo a {
+        position: absolute;
+        left: 38%;
+        font-size: 1.3em;
+        margin-top: 26px;
+    }
+
+    .form {
+        max-width: 94%;
+    }
+}

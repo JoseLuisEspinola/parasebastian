@@ -1,0 +1,108 @@
+CREATE TABLE IF NOT EXISTS generos (
+	id_genero BIGSERIAL PRIMARY KEY,
+	genero VARCHAR(40) NOT NULL
+);
+
+
+CREATE TABLE IF NOT EXISTS actores (
+	id_actor SERIAL PRIMARY KEY,
+	nombre VARCHAR(50) NOT NULL
+);
+
+
+CREATE TABLE IF NOT EXISTS directores (
+	id_director SERIAL PRIMARY KEY,
+	nombre VARCHAR(50) NOT NULL
+);
+
+
+CREATE TABLE IF NOT EXISTS peliculas (
+	id_pelicula SERIAL PRIMARY KEY,
+	titulo VARCHAR(100) NOT NULL,
+	sinopsis TEXT,
+	imagen BYTEA,
+	url_pelicula TEXT NOT NULL,
+	ano_extreno INTEGER,
+	duracion INTEGER,
+	genero SERIAL NOT NULL,
+	categoria VARCHAR(30) NOT NULL,
+	actor SERIAL NOT NULL,
+	director SERIAL,
+	FOREIGN KEY (genero) REFERENCES generos(id_genero),
+	FOREIGN KEY (actor) REFERENCES actores(id_actor),
+	FOREIGN KEY (director) REFERENCES directores(id_director)
+);
+
+
+CREATE TABLE IF NOT EXISTS usuarios (
+	id_usuario SERIAL PRIMARY KEY,
+	img_usuario BYTEA,
+	apellido VARCHAR(40) NOT NULL,
+	nombre VARCHAR(40) NOT NULL,
+	email TEXT UNIQUE NOT NULL,
+	contrasena VARCHAR(20) NOT NULL,
+	dato_check BOOLEAN NOT NULL DEFAULT TRUE,
+	nivel_acceso INTEGER NOT NULL DEFAULT 0
+);
+
+
+
+5:09 p.m.
+@app.get("/api/actores")
+def get_actores():
+
+    # conectar a la bbdd
+    conn = get_connection()
+    # crear un cursor -- se encarga de ejecutar las queries
+    cursor = conn.cursor(cursor_factory=extras.RealDictCursor)
+
+    # ejecutar la query para obtener registros
+    cursor.execute("SELECT * FROM actores")
+    actores = cursor.fetchall()
+
+    # cerrar el cursor y la conexión
+    cursor.close()
+    conn.close()
+
+    # retornar los resultados
+    return jsonify(actores)
+
+    
+@app.get("/api/directores")
+def get_directores():
+
+    # conectar a la bbdd
+    conn = get_connection()
+    # crear un cursor -- se encarga de ejecutar las queries
+    cursor = conn.cursor(cursor_factory=extras.RealDictCursor)
+
+    # ejecutar la query para obtener registros
+    cursor.execute("SELECT * FROM directores")
+    directores = cursor.fetchall()
+
+    # cerrar el cursor y la conexión
+    cursor.close()
+    conn.close()
+
+    # retornar los resultados
+    return jsonify(directores)
+
+
+@app.get("/api/generos")
+def get_generos():
+
+    # conectar a la bbdd
+    conn = get_connection()
+    # crear un cursor -- se encarga de ejecutar las queries
+    cursor = conn.cursor(cursor_factory=extras.RealDictCursor)
+
+    # ejecutar la query para obtener registros
+    cursor.execute("SELECT * FROM generos")
+    generos = cursor.fetchall()
+
+    # cerrar el cursor y la conexión
+    cursor.close()
+    conn.close()
+
+    # retornar los resultados
+    return jsonify(generos)

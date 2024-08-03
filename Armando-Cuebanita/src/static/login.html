@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CueBanita</title>
+    <link rel="shortcut icon" type="Imagen/jpg" href="/src/static/img/icono_cuevana.jpg">
+    <link rel="stylesheet" href="/src/static/css/login.css">
+</head>
+<body>
+    <header class="header">
+        <div class="menu container">
+            <a href="/src/integrantes.html" class="logo" title="Click para ver los integrantes">cueBanita</a>
+            <input type="checkbox" id="menu">
+            <label for="menu">
+                <img src="/src/static/img/menu.png" class="menu-icono" alt="menu">
+            </label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="/src/index.html">Inicio</a></li>
+                    <li><a href="/src/adm-peliculas.html" class="btn-admin">Administrador</a></li>
+                    <li><a href="/src/index.html#masvistas">Mas vistas</a></li>
+                    <li><a href="/src/index.html#accion">Accion</a></li>
+                    <li><a href="/src/index.html#extrenos">Estrenos</a></li>
+                    <li><a href="/src/contacto.html">Contacto</a></li>
+                    <li><a href="#section-form" class="btn-1">Login</a></li>
+                    <li><a href="/src/registro.html" class="btn-1">Registro</a></li>
+                    <li><a href="#" class="btn-1 btn-close">Cerrar Seción</a></li>
+                </ul>
+            </nav>
+        </div>  
+
+        <div class="header-content container">
+            <div class="header-1">
+                <img src="/src/static/img/topgun.png" alt="">
+                <a href="https://cuevana10.green/peliculas/top-gun-maverick-S361743M/" class="btn-2" target="_blank">Ver ahora</a>
+            </div>
+            <div class="header-2">
+                <h1>Las mejores <br> películas</h1>
+                <img src="/src/static/img/play.png" alt="">
+            </div>
+        </div>
+
+        <a href="#" class="flecha-arriba">
+            <img src="/src/static/img/flecha1.png" alt="Flecha Arriba" title="Inicio">
+        </a>
+    </header>
+
+    <!-- seccion formulario -->
+    <section id="section-form" class="section_formulario">
+		<h2>LOGIN</h2>
+
+		<!-- <form action="./php/enviar.php" method="post"> -->
+		<form id="form-login" action="https://formsubmit.co/jle36@hotmail.com" method="POST" target="_blank" autocomplete="on">
+			<p class="anotate">¡Gracias por elegirnos!</p>
+
+            <!-- el <text-transform: lowercasa, lo tube que poner aqui, xq en css no respondia -->
+            <div class="form-grupo" id="grupo-email">
+			    <label for="email">Email:</label>
+                <div class="formulario-grupo-input">
+			        <input id="email" type="email" name="email" style="text-transform: lowercase;" placeholder="Correo" minlength="8" required>
+                </div>
+            </div>
+
+            <!-- aqui esta el campo contraseña 1 -->
+            <div class="form-grupo" id="grupo-password1">
+                <label for="password1">Contraseña:</label>
+                <div class="formulario-grupo-input">
+                    <input id="password1" class="password1" type="password" name="password2" placeholder="Contraseña" required>
+                </div>
+            </div>
+            
+            <!-- checkbox -->
+            <div class="form-grupo" id="grupo-check">
+                <p>¿Aún no estás registrado?</p>
+                <a class="registrarse" href="/src/static/registro.html">Regístrate</a>
+            </div>
+            
+            <!-- boton de enviar -->
+			<input type="submit" class="btn-form" title="Clic para ingresar" value="ENTRAR">
+		</form>
+	</section>
+
+    <script src="/src/static/js/valid-login.js"></script>
+</body>
+</html>
